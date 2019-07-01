@@ -1,0 +1,23 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattstuhring/data-structures-and-algorithms.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattstuhring/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/mattstuhring/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "jest": "^24.1.0"
+  }
+}
