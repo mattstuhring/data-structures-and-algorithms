@@ -8,10 +8,7 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-  return word.toUpperCase();
-};
+const greeting = word => word.toUpperCase();
 
 const speaker = (message, callback) => callback(message);
 
@@ -32,18 +29,13 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
-  arr.push(value);
-};
+const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-  for (let i = 0 ; i < times ; i ++){
-    callback(
-      arr, num
-    )
+  for (let i = 0 ; i < times ; i ++) {
+    callback(arr, num);
   }
+
   return arr;
 };
 
@@ -62,19 +54,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here... c
-  if ( num %3 === 2){
+  if ( num % 3 === 2) {
     arr.pop();
   }
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
   for ( let i = 0; i < arr.length ; i ++){
-    callback(
-      arr[i], arr
-    )
+    callback(arr[i], arr);
   }
+
   return arr;
 };
 
@@ -85,12 +74,8 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
-  arr.forEach( (item) => {
-    callback(
-      item, arr
-    )
-  })
+  arr.forEach(item => callback(item, arr));
+
   return arr;
 };
 
@@ -108,10 +93,8 @@ This anonymous function should accept up to three arguments: the element, the in
 
 const removeWithAnon = (arr) => {
   // Solution code here...
-  arr.forEach( (item, idx, arr) => {
-    return removeOne(item, arr);
-  }
-  )
+  arr.forEach((item, idx, arr) => removeOne(item, arr));
+
   return arr;
 };
 
@@ -133,9 +116,9 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
   var inventory = [];
-  availableItems.forEach((item, idx) => {
+
+  availableItems.forEach(item => {
     if (item.available) {
       inventory.push(item.name);
     }
@@ -159,9 +142,9 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
   let results = [];
-  arr.forEach((item) => {
+
+  arr.forEach(item => {
     if (item % 3 === 0 && item % 5 === 0) {
       results.push('Fizz Buzz');
     } else if (item % 5 === 0) {
