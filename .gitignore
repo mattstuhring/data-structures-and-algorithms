@@ -11,4 +11,8 @@ logs
 # NPM node modules
 node_modules
 
+# Jest test output directory
 coverage
+
+# JS file to practice in
+sandbox.js
