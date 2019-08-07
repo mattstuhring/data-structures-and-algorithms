@@ -23,6 +23,9 @@ newArray[i] = array[(array.length - 1) - i]
 ### Code
 [Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayReverse.java)
 
+### Contributions
+- Sapana Poudel
+
 #### Solution
 ![Whiteboard](code401challenges/assets/array-reverse.jpg)
 
@@ -42,6 +45,10 @@ Space: O(n)
 
 ### Code
 [Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayShift.java)
+
+### Contributions
+- Jack Kinne
+- Manish KC
 
 #### Solution
 ![Whiteboard](code401challenges/assets/array-shift.jpg)
