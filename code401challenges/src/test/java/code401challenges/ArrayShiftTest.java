@@ -20,7 +20,7 @@ public class ArrayShiftTest {
     public void insertShiftArray_oddArrayLengthHappy() {
         int[] testArray = new int[]{1,2,3,4,5};
         int num = 6;
-        int[] expectedArray = new int[]{1,2,6,3,4,5};
+        int[] expectedArray = new int[]{1,2,3,6,4,5};
 
         assertArrayEquals(expectedArray, ArrayShift.insertShiftArray(testArray, num));
     }
