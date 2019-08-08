@@ -52,3 +52,29 @@ Space: O(n)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/array-shift.jpg)
+
+--------------------------------------------------------------
+
+### 3. Binary search in a sorted 1D array
+
+#### Challenge
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+#### Approach & Efficiency
+As long as min is less than or equal to max a while loop will continue to check if the key is larger, smaller, or the same.  If the element does not exist the method will return -1;
+
+Big O Notation
+Time: O(log(n))
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java)
+
+### Contributions
+- Jack Kinne
+- Brandon Hurrington
+- Marisha Hoza
+- Chris Coulon
+
+#### Solution
+![Whiteboard](code401challenges/assets/binary-search.jpg)
