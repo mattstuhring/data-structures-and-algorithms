@@ -78,3 +78,29 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/binary-search.jpg)
+
+--------------------------------------------------------------
+
+### 4. Linked List Implementation
+
+#### Challenge
+Implement a Singly Linked List Data Structure
+
+#### Approach & Efficiency
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.  Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/linkedList/LinkedList.java)
+
+### Contributions
+- Jack Kinne
+- Melfi Perez
+- Nic Paro
+- Travis Cox
+
+#### Solution
+N/A
