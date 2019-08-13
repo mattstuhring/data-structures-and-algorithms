@@ -3,6 +3,9 @@
 ## Table of Contents
 1. Reverse an Array
 2. Insert and shift an array in middle at index
+3. Binary search in a sorted 1D array
+4. Linked List Implementation
+5. Linked list insertions
 
 --------------------------------------------------------------
 
@@ -104,3 +107,26 @@ Space: O(1)
 
 #### Solution
 N/A
+
+--------------------------------------------------------------
+
+### 5. Linked list insertions
+
+#### Challenge
+Write 3 insertion methods for a singly linked list.
+
+#### Approach & Efficiency
+Continue working off of the already built LinkedList & Node class.  Implement 3 insertion methods to append a node at the end, insert before a node, and insert after a node.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/linkedList/LinkedList.java)
+
+### Contributions
+- Renee Messick
+
+#### Solution
+![Whiteboard](code401challenges/assets/linked-list.jpg)
