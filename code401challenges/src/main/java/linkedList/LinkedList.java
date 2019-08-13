@@ -1,7 +1,7 @@
 package linkedList;
 
-public class LinkedList {
-    public Node head;
+public class LinkedList<T> {
+    public Node<T> head;
 
     public LinkedList() {
         this.head = null;
@@ -9,7 +9,9 @@ public class LinkedList {
 
     // insert method
     // adds a new node with that value to the head of the list
-    public void insert(Node newNode) {
+    public void insert(T value) {
+        Node<T> newNode = new Node<>(value);
+
         if (this.head == null) {
             head = newNode;
         } else {
@@ -20,11 +22,11 @@ public class LinkedList {
 
     // includes method
     // returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-    public boolean includes(Node node) {
-        Node current = head;
+    public boolean includes(T value) {
+        Node<T> current = head;
 
         while(current != null) {
-            if (current.value == node.value) {
+            if (current.value == value) {
                 return true;
             }
 
