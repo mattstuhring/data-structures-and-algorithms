@@ -130,3 +130,26 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/linked-list.jpg)
+
+--------------------------------------------------------------
+
+### 7. k-th value from the end of a linked list
+
+#### Challenge
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+
+#### Approach & Efficiency
+Traverse the entire linked list while keeping track of the length.  Iterate from 0 to the length of the linked list subtracting the k value.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/linkedList/LinkedList.java)
+
+### Contributions
+- Roman Gebrehiwot
+
+#### Solution
+![Whiteboard](code401challenges/assets/linked-list-kth.jpg)

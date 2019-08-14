@@ -97,4 +97,34 @@ public class LinkedListTest {
 
         assertEquals("4, 3, 2, 1, 5", ll.toString());
     }
+
+    @Test
+    public void testKthFromEnd_middleKth() {
+        assertEquals(3, ll.kthFromEnd(2));
+    }
+
+    @Test
+    public void testKthFromEnd_sameLength() {
+        assertEquals(1, ll.kthFromEnd(0));
+    }
+
+    @Test
+    public void testKthFromEnd_greaterThanLength() {
+        assertEquals("Exception", ll.kthFromEnd(6));
+    }
+
+    @Test
+    public void testKthFromEnd_negativeInteger() {
+        // 4,3,2,1
+        assertEquals("Exception", ll.kthFromEnd(-1));
+    }
+
+    @Test
+    public void testKthFromEnd_size1LinkedList() {
+        // 4,3,2,1
+        LinkedList ll = new LinkedList();
+        ll.append(1);
+
+        assertEquals(1, ll.kthFromEnd(0));
+    }
 }
