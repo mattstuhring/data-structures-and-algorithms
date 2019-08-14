@@ -122,4 +122,26 @@ public class LinkedList<T> {
             current = current.next;
         }
     }
+
+    public T kthFromEnd(int k) {
+        Node<T> current = head;
+        int nodeLength = 0;
+
+        while(current != null) {
+            nodeLength++;
+            current = current.next;
+        }
+
+        current = head;
+        int nodeIndex = (nodeLength - k) - 1;
+        for (int i = 0; i <= nodeIndex; i++) {
+            if (i == nodeIndex) {
+                return current.value;
+            }
+
+            current = current.next;
+        }
+
+        return (T)"Exception";
+    }
 }
