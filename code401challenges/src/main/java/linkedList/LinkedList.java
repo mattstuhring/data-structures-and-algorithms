@@ -142,6 +142,33 @@ public class LinkedList<T> {
             current = current.next;
         }
 
-        return (T)"Exception";
+        throw new IllegalArgumentException();
+    }
+
+    public static <F> LinkedList<F> mergeLists(LinkedList<F> list1, LinkedList<F> list2) {
+        LinkedList<F> newList = new LinkedList<>();
+        newList.head = list1.head;
+        Node<F> current = list1.head;
+        Node<F> current1 = list1.head.next;
+        Node<F> current2 = list2.head;
+        int count = 0;
+
+        while(current1 != null || current2 != null) {
+            count++;
+
+            if (count % 2 == 1 && current2 != null) {
+                current.next = current2;
+                current = current.next;
+                current2 = current2.next;
+            }
+
+            if (count % 2 == 0 && current1 != null) {
+                current.next = current1;
+                current = current.next;
+                current1 = current1.next;
+            }
+        }
+
+        return newList;
     }
 }
