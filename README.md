@@ -153,3 +153,27 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/linked-list-kth.jpg)
+
+--------------------------------------------------------------
+
+### 8. Merge two linked lists
+
+#### Challenge
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1).
+
+#### Approach & Efficiency
+Traverse both linked list and do that until both point to null.  While traversing we are create a new linked list that points to the alterating nodes and always updating the next node for each linked list.  Once both linked list are pointing to null then we return the new linked list.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/linkedList/LinkedList.java)
+
+### Contributions
+- Jane Hur
+- Nic Paro
+
+#### Solution
+![Whiteboard](code401challenges/assets/linked-list-merge.jpg)

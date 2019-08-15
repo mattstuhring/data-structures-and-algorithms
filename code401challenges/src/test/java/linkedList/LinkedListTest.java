@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 
 public class LinkedListTest {
 
-    LinkedList ll;
+    LinkedList<Integer> ll;
     @Before
     public void setupTestLinkedList() throws Exception {
-        ll = new LinkedList();
+        ll = new LinkedList<>();
         ll.insert(1);
         ll.insert(2);
         ll.insert(3);
@@ -19,7 +19,7 @@ public class LinkedListTest {
 
     @Test
     public void testInsert_containsNoValues() {
-        LinkedList emptyLinkedList = new LinkedList();
+        LinkedList<Integer> emptyLinkedList = new LinkedList<>();
 
         assertNull("Linked list should be null", emptyLinkedList.head);
     }
@@ -31,7 +31,7 @@ public class LinkedListTest {
 
     @Test
     public void testHeadValue() {
-        assertEquals(4, ll.head.value);
+        assertEquals((Integer)4, ll.head.value);
     }
 
     @Test
@@ -100,31 +100,58 @@ public class LinkedListTest {
 
     @Test
     public void testKthFromEnd_middleKth() {
-        assertEquals(3, ll.kthFromEnd(2));
+        assertEquals((Integer)3, ll.kthFromEnd(2));
     }
 
     @Test
     public void testKthFromEnd_sameLength() {
-        assertEquals(1, ll.kthFromEnd(0));
+        assertEquals((Integer)1, ll.kthFromEnd(0));
     }
 
-    @Test
-    public void testKthFromEnd_greaterThanLength() {
-        assertEquals("Exception", ll.kthFromEnd(6));
+    @Test(expected = IllegalArgumentException.class)
+    public void testKthFromEnd_greaterThanLength() throws IllegalArgumentException {
+        assertEquals(IllegalArgumentException.class, ll.kthFromEnd(6));
     }
 
-    @Test
-    public void testKthFromEnd_negativeInteger() {
-        // 4,3,2,1
-        assertEquals("Exception", ll.kthFromEnd(-1));
+    @Test(expected = NullPointerException.class)
+    public void testKthFromEnd_negativeInteger() throws NullPointerException {
+        assertEquals(NullPointerException.class, ll.kthFromEnd(-1));
     }
 
     @Test
     public void testKthFromEnd_size1LinkedList() {
-        // 4,3,2,1
-        LinkedList ll = new LinkedList();
+        LinkedList<Integer> ll = new LinkedList<>();
         ll.append(1);
 
-        assertEquals(1, ll.kthFromEnd(0));
+        assertEquals((Integer)1, ll.kthFromEnd(0));
+    }
+
+    @Test
+    public void testMergeLinkedList1() {
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.append(1);
+        list1.append(3);
+        list1.append(2);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        assertEquals("1, 5, 3, 9, 2, 4", LinkedList.mergeLists(list1, list2).toString());
+    }
+
+    @Test
+    public void testMergeLinkedList2() {
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.append(1);
+        list1.append(3);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        assertEquals("1, 5, 3, 9, 4", LinkedList.mergeLists(list1, list2).toString());
     }
 }
