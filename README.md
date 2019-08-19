@@ -6,6 +6,7 @@
 3. Binary search in a sorted 1D array
 4. Linked List Implementation
 5. Linked list insertions
+6. Stacks and queues
 
 --------------------------------------------------------------
 
@@ -177,3 +178,30 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/linked-list-merge.jpg)
+
+--------------------------------------------------------------
+
+### 9. Stacks and Queues
+
+#### Challenge
+Implement a Stack and a Queue Data Structure
+
+#### Approach & Efficiency
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.  For the Stack class implement methods for push, pop, and peek.  For the Queue class implement mehtods for enqueue, dequeue, and peek.
+
+Big O Notation
+Time: O(1)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/linkedList/LinkedList.java)
+
+### Contributions
+- Jack Kinne
+- Melfi Perez
+- Nic Paro
+- Travis Cox
+- Renee Messick
+
+#### Solution
+N/A
