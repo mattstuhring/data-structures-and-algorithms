@@ -68,4 +68,10 @@ public class QueueTest {
 
         assertNull(queue.front);
     }
+
+    @Test
+    public void testInstantiateEmptyQueue() {
+        Queue queue = new Queue();
+        assertNull(queue.front);
+    }
 }
