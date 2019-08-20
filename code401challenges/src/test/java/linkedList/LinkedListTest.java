@@ -31,7 +31,7 @@ public class LinkedListTest {
 
     @Test
     public void testHeadValue() {
-        assertEquals((Integer)4, ll.head.value);
+        assertEquals(4, (int)ll.head.value);
     }
 
     @Test
@@ -100,22 +100,22 @@ public class LinkedListTest {
 
     @Test
     public void testKthFromEnd_middleKth() {
-        assertEquals((Integer)3, ll.kthFromEnd(2));
+        assertEquals(3, (int)ll.kthFromEnd(2));
     }
 
     @Test
     public void testKthFromEnd_sameLength() {
-        assertEquals((Integer)1, ll.kthFromEnd(0));
+        assertEquals(1, (int)ll.kthFromEnd(0));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testKthFromEnd_greaterThanLength() throws IllegalArgumentException {
-        assertEquals(IllegalArgumentException.class, ll.kthFromEnd(6));
+    public void testKthFromEnd_greaterThanLength() {
+        assertNull(ll.kthFromEnd(6));
     }
 
     @Test(expected = NullPointerException.class)
-    public void testKthFromEnd_negativeInteger() throws NullPointerException {
-        assertEquals(NullPointerException.class, ll.kthFromEnd(-1));
+    public void testKthFromEnd_negativeInteger() {
+        assertNull(ll.kthFromEnd(-1));
     }
 
     @Test
@@ -123,7 +123,7 @@ public class LinkedListTest {
         LinkedList<Integer> ll = new LinkedList<>();
         ll.append(1);
 
-        assertEquals((Integer)1, ll.kthFromEnd(0));
+        assertEquals(1, (int)ll.kthFromEnd(0));
     }
 
     @Test

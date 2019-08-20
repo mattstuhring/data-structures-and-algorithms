@@ -1,12 +1,12 @@
 package stacksandqueues;
 
-public class PseudoQueue {
-    public Stack stack1;
-    public Stack stack2;
+public class PseudoQueue<T> {
+    public Stack<T> stack1;
+    public Stack<T> stack2;
 
     public PseudoQueue() {
-        this.stack1 = new Stack();
-        this.stack2 = new Stack();
+        this.stack1 = new Stack<>();
+        this.stack2 = new Stack<>();
     }
 
 //    enQueue(x)
@@ -18,13 +18,13 @@ public class PseudoQueue {
 //    While stack1 is not empty, push everything from stack1 to stack2.
 //  3) Pop the element from stack2 and return it.
 
-    public void enqueue(int value) {
+    public void enqueue(T value) {
         this.stack1.push(value);
     }
 
-    public int dequeue() {
+    public T dequeue() {
         if (this.stack1.top == null && this.stack2.top == null) {
-            throw new NullPointerException();
+            return null;
         } else {
             if (this.stack2.top == null) {
                 while(this.stack1.top != null) {

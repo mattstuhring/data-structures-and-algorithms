@@ -1,11 +1,11 @@
 package stacksandqueues;
 
-public class Queue {
-    public Node front;
-    public Node rear;
+public class Queue<T> {
+    public Node<T> front;
+    public Node<T> rear;
 
-    public void enqueue(int value) {
-        Node newRearNode = new Node(value);
+    public void enqueue(T value) {
+        Node<T> newRearNode = new Node<>(value);
 
         if (this.front == null) {
             this.front = newRearNode;
@@ -16,16 +16,16 @@ public class Queue {
         }
     }
 
-    public int dequeue() {
+    public T dequeue() {
         if (this.front == null) {
-            throw new NullPointerException();
+            return null;
         } else {
 
             if (this.front == this.rear) {
                 this.rear = null;
             }
 
-            int tempNodeValue = this.front.value;
+            T tempNodeValue = this.front.value;
 
             this.front = this.front.next;
 
@@ -33,9 +33,9 @@ public class Queue {
         }
     }
 
-    public int peek() {
+    public T peek() {
         if (this.front == null) {
-            throw new NullPointerException();
+            return null;
         } else {
             return this.front.value;
         }
