@@ -230,4 +230,4 @@ Space: O(1)
 - Renee Messick
 
 #### Solution
-N/A
+![Whiteboard](code401challenges/assets/stacks-and-queues.jpg)
