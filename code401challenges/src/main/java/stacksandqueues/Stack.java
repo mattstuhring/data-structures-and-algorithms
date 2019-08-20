@@ -12,13 +12,11 @@ public class Stack {
 
     public int pop() {
         if (this.top == null) {
-            throw new NullPointerException();
+            return Integer.parseInt(null);
         } else {
-            Node temp = this.top;
             int tempValue = this.top.value;
 
             this.top = this.top.next;
-            temp.next = null;
 
             return tempValue;
         }
@@ -26,7 +24,7 @@ public class Stack {
 
     public int peek() {
         if (this.top == null) {
-            throw new NullPointerException();
+            return Integer.parseInt(null);
         } else {
             return this.top.value;
         }
