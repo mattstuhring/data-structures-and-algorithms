@@ -11,8 +11,8 @@ public class Queue {
             this.front = newRearNode;
             this.rear = newRearNode;
         } else {
-            rear.next = newRearNode;
-            rear = newRearNode;
+            this.rear.next = newRearNode;
+            this.rear = newRearNode;
         }
     }
 
@@ -25,11 +25,9 @@ public class Queue {
                 this.rear = null;
             }
 
-            Node tempNode = front;
-            int tempNodeValue = tempNode.value;
+            int tempNodeValue = this.front.value;
 
-            front = front.next;
-            tempNode.next = null;
+            this.front = this.front.next;
 
             return tempNodeValue;
         }
