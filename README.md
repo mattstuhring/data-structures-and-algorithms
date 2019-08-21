@@ -7,6 +7,7 @@
 4. Linked List Implementation
 5. Linked list insertions
 6. Stacks and queues
+7. Animal Shelter
 
 --------------------------------------------------------------
 
@@ -231,3 +232,32 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/stacks-and-queues.jpg)
+
+--------------------------------------------------------------
+
+### 10. Animal Shelter
+
+#### Challenge
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+
+Implement the following methods:
+- enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+- dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+#### Approach & Efficiency
+Create two queue's one for the dogs and one for the cats.  Create the enqueue method that checks if the parameter is a dog/cat and equeue to the correct queue.  Create the dequeue method that checks the preference is a dog/cat and also check that the queue is not empty.
+
+Big O Notation
+Time: O(1)
+Space: O(n)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/utilities/AnimalShelter.java)
+
+### Contributions
+- Jack Kinne
+- Melfi Perez
+- Renee Messick
+
+#### Solution
+![Whiteboard](code401challenges/assets/animal-shelter.jpg)
