@@ -1,5 +1,7 @@
 package utilities;
 
+import stacksandqueues.Queue;
+
 public class AnimalShelter {
     public Queue<String> cats;
     public Queue<String> dogs;
