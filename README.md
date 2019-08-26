@@ -8,6 +8,7 @@
 5. Linked list insertions
 6. Stacks and queues
 7. Animal Shelter
+8. Binary Tree and BST Implementation
 
 --------------------------------------------------------------
 
@@ -261,3 +262,36 @@ Space: O(n)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/animal-shelter.jpg)
+
+--------------------------------------------------------------
+
+### 15. Binary Tree and BST Implementation
+
+#### Challenge
+Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
+Create a BinaryTree class
+Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+
+Create a BinarySearchTree class
+Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
+Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+
+#### Approach & Efficiency
+Implement a tree by following instructions.
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/tree/BinarySearchTree.java)
+
+### Contributions
+- Jack Kinne
+- Melfi Perez
+- Renee Messick
+- Travis Cox
+- Nic Paro
+
+### Resources
+- https://www.youtube.com/watch?v=OgJL8eh87PI
+- https://www.baeldung.com/java-binary-tree
+
+#### Solution
+N/A
