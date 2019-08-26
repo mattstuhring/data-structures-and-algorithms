@@ -8,7 +8,8 @@
 5. Linked list insertions
 6. Stacks and queues
 7. Animal Shelter
-8. Binary Tree and BST Implementation
+8. Multi-bracket Validation
+9. Binary Tree and BST Implementation
 
 --------------------------------------------------------------
 
@@ -265,6 +266,33 @@ Space: O(n)
 
 --------------------------------------------------------------
 
+### 11. Multi-bracket Validation
+
+#### Challenge
+Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+- Round Brackets : ()
+- Square Brackets : []
+- Curly Brackets : {}
+
+#### Approach & Efficiency
+Create two queue's one for the dogs and one for the cats.  Create the enqueue method that checks if the parameter is a dog/cat and equeue to the correct queue.  Create the dequeue method that checks the preference is a dog/cat and also check that the queue is not empty.
+
+Big O Notation
+Time: O(n)
+Space: O(n)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/utilities/MultiBracketValidation.java)
+
+### Contributions
+N/A
+
+#### Solution
+![Whiteboard](code401challenges/assets/brackets-validation.jpg)
+
+--------------------------------------------------------------
+
 ### 15. Binary Tree and BST Implementation
 
 #### Challenge
@@ -295,3 +323,4 @@ Implement a tree by following instructions.
 
 #### Solution
 N/A
+
