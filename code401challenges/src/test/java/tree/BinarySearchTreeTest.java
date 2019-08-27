@@ -2,8 +2,6 @@ package tree;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class BinarySearchTreeTest {
@@ -48,7 +46,7 @@ public class BinarySearchTreeTest {
         tree.add(29);
         tree.add(32);
 
-        assertEquals("[15, 20, 22, 25, 26, 27, 29, 30, 32]", tree.inOrder(tree.root, new ArrayList<Integer>()).toString());
+        assertEquals("[15, 20, 22, 25, 26, 27, 29, 30, 32]", tree.inOrder().toString());
     }
 
     @Test
@@ -65,7 +63,7 @@ public class BinarySearchTreeTest {
         tree.add(32);
 
         // 25 20 15 22 27 26 30 29 32
-        assertEquals("[25, 20, 15, 22, 27, 26, 30, 29, 32]", tree.preOrder(tree.root, new ArrayList<Integer>()).toString());
+        assertEquals("[25, 20, 15, 22, 27, 26, 30, 29, 32]", tree.preOrder().toString());
     }
 
     @Test
@@ -82,7 +80,7 @@ public class BinarySearchTreeTest {
         tree.add(32);
 
         // 15 22 20 26 29 32 30 27 25
-        assertEquals("[15, 22, 20, 26, 29, 32, 30, 27, 25]", tree.postOrder(tree.root, new ArrayList<Integer>()).toString());
+        assertEquals("[15, 22, 20, 26, 29, 32, 30, 27, 25]", tree.postOrder().toString());
     }
 
     @Test

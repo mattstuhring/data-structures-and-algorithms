@@ -3,7 +3,7 @@ package tree;
 public class BinarySearchTree extends Tree<Integer> {
 
     public BinarySearchTree() {
-        super.root = null;
+        super();
     }
 
     // https://www.youtube.com/watch?v=OgJL8eh87PI
@@ -15,7 +15,7 @@ public class BinarySearchTree extends Tree<Integer> {
             this.root = nodeToAdd;
         }
 
-        traverseAndAddNode(root, nodeToAdd);
+        traverseAndAddNode(this.root, nodeToAdd);
     }
 
     private void traverseAndAddNode(Node<Integer> node, Node<Integer> nodeToAdd) {
