@@ -1,6 +1,7 @@
 package tree;
 
-import java.lang.reflect.Array;
+import stacksandqueues.Queue;
+
 import java.util.ArrayList;
 
 public class Tree<T> {
@@ -67,5 +68,33 @@ public class Tree<T> {
         }
 
         return arr;
+    }
+
+    public ArrayList<Integer> BinaryTreeBreadthFirst(Tree<Object> tree) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Queue<Node> queue = new Queue<>();
+
+        if (tree.root == null) {
+            return result;
+        } else {
+            queue.enqueue(tree.root);
+        }
+
+        while (queue.peek() != null) {
+
+            if (queue.peek().left != null) {
+                queue.enqueue(queue.peek().left);
+            }
+
+            if (queue.peek().right != null) {
+                queue.enqueue(queue.peek().right);
+            }
+
+            Integer value = (Integer) queue.dequeue().value;
+            System.out.println(value);
+            result.add(value);
+        }
+
+        return result;
     }
 }
