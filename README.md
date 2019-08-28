@@ -10,6 +10,7 @@
 7. Animal Shelter
 8. Multi-bracket Validation
 9. Binary Tree and BST Implementation
+10. Breadth-first Traversal
 
 --------------------------------------------------------------
 
@@ -354,3 +355,26 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/fizz-buzz-tree.jpg)
+
+--------------------------------------------------------------
+
+### 17. Breadth-first Traversal
+
+#### Challenge
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+
+#### Approach & Efficiency
+Use a queue data structure and it's methods to traverse through the binary tree.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/tree/Tree.java)
+
+### Contributions
+- Jack Kinne
+
+#### Solution
+![Whiteboard](code401challenges/assets/breadth-first-tree.jpg)

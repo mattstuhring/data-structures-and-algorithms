@@ -114,4 +114,26 @@ public class BinarySearchTreeTest {
 
         assertFalse(tree.contains(24));
     }
+
+    @Test
+    public void testTraverseBreadthFirst() {
+        //       2
+        //     /  \
+        //    7    5
+        //   / \    \
+        //  2  6     9
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new Node<>(2);
+        tree.root.left = new Node<>(7);
+        tree.root.right = new Node<>(5);
+        tree.root.left.left = new Node<>(2);
+        tree.root.left.right = new Node<>(6);
+        tree.root.right.right = new Node<>(9);
+
+        Tree<Node> t = new Tree<>();
+
+        assertEquals("[2, 7, 5, 2, 6, 9]", t.BinaryTreeBreadthFirst(tree).toString());
+    }
 }
