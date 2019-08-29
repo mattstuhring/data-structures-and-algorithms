@@ -10,6 +10,8 @@
 7. Animal Shelter
 8. Multi-bracket Validation
 9. Binary Tree and BST Implementation
+10. Breadth-first Traversal
+11. Find the Maximum Value in a Binary Tree
 
 --------------------------------------------------------------
 
@@ -354,8 +356,6 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/fizz-buzz-tree.jpg)
-<<<<<<< Updated upstream
-=======
 
 --------------------------------------------------------------
 
@@ -380,6 +380,7 @@ Space: O(1)
 #### Solution
 ![Whiteboard](code401challenges/assets/breadth-first-tree.jpg)
 
+--------------------------------------------------------------
 
 ### 18. Find the Maximum Value in a Binary Tree
 
@@ -402,4 +403,3 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/max-value.jpg)
->>>>>>> Stashed changes

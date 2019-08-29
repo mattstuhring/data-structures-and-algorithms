@@ -1,6 +1,7 @@
 package tree;
 
-import java.lang.reflect.Array;
+import stacksandqueues.Queue;
+
 import java.util.ArrayList;
 
 public class Tree<T> {
@@ -69,8 +70,6 @@ public class Tree<T> {
 
         return arr;
     }
-<<<<<<< Updated upstream
-=======
 
     public ArrayList<Integer> BinaryTreeBreadthFirst(Tree<Object> tree) {
         ArrayList<Integer> result = new ArrayList<>();
@@ -121,5 +120,4 @@ public class Tree<T> {
             findMaxValueRecursion(node.right);
         }
     }
->>>>>>> Stashed changes
 }

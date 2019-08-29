@@ -114,8 +114,6 @@ public class BinarySearchTreeTest {
 
         assertFalse(tree.contains(24));
     }
-<<<<<<< Updated upstream
-=======
 
     @Test
     public void testTraverseBreadthFirst() {
@@ -182,5 +180,5 @@ public class BinarySearchTreeTest {
 
         assertEquals((Integer) 23, t.findMaxValue(tree));
     }
->>>>>>> Stashed changes
+
 }
