@@ -114,4 +114,73 @@ public class BinarySearchTreeTest {
 
         assertFalse(tree.contains(24));
     }
+<<<<<<< Updated upstream
+=======
+
+    @Test
+    public void testTraverseBreadthFirst() {
+        //       2
+        //     /  \
+        //    7    5
+        //   / \    \
+        //  2  6     9
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new Node<>(2);
+        tree.root.left = new Node<>(7);
+        tree.root.right = new Node<>(5);
+        tree.root.left.left = new Node<>(2);
+        tree.root.left.right = new Node<>(6);
+        tree.root.right.right = new Node<>(9);
+
+        Tree<Node> t = new Tree<>();
+
+        assertEquals("[2, 7, 5, 2, 6, 9]", t.BinaryTreeBreadthFirst(tree).toString());
+    }
+
+    @Test
+    public void testFindMaxValue_test1() {
+        //       2
+        //     /  \
+        //    7    5
+        //   / \    \
+        //  2  6     9
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new Node<>(2);
+        tree.root.left = new Node<>(7);
+        tree.root.right = new Node<>(5);
+        tree.root.left.left = new Node<>(2);
+        tree.root.left.right = new Node<>(6);
+        tree.root.right.right = new Node<>(9);
+
+        Tree<Object> t = new Tree<>();
+
+        assertEquals((Integer) 9, t.findMaxValue(tree));
+    }
+
+    @Test
+    public void testFindMaxValue_test2() {
+        //       10
+        //     /  \
+        //    15    23
+        //   / \    \
+        //  22  6    19
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new Node<>(10);
+        tree.root.left = new Node<>(15);
+        tree.root.right = new Node<>(23);
+        tree.root.left.left = new Node<>(22);
+        tree.root.left.right = new Node<>(6);
+        tree.root.right.right = new Node<>(19);
+
+        Tree<Object> t = new Tree<>();
+
+        assertEquals((Integer) 23, t.findMaxValue(tree));
+    }
+>>>>>>> Stashed changes
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Tree<T> {
     public Node<T> root;
+    private int max = 0;
 
     public Tree() {
         this.root = null;
@@ -68,4 +69,57 @@ public class Tree<T> {
 
         return arr;
     }
+<<<<<<< Updated upstream
+=======
+
+    public ArrayList<Integer> BinaryTreeBreadthFirst(Tree<Object> tree) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Queue<Node> queue = new Queue<>();
+
+        if (tree.root == null) {
+            return result;
+        } else {
+            queue.enqueue(tree.root);
+        }
+
+        while (queue.peek() != null) {
+
+            if (queue.peek().left != null) {
+                queue.enqueue(queue.peek().left);
+            }
+
+            if (queue.peek().right != null) {
+                queue.enqueue(queue.peek().right);
+            }
+
+            Integer value = (Integer) queue.dequeue().value;
+            System.out.println(value);
+            result.add(value);
+        }
+
+        return result;
+    }
+
+    public Integer findMaxValue(Tree<Object> tree) {
+        if (tree.root == null) {
+            return null;
+        }
+
+        findMaxValueRecursion(tree.root);
+
+        return (Integer) max;
+    }
+
+    public void findMaxValueRecursion(Node<Object> node) {
+        if (node != null) {
+
+            if ((int)node.value > this.max) {
+                this.max = (int)node.value;
+            }
+
+            findMaxValueRecursion(node.left);
+            findMaxValueRecursion(node.right);
+        }
+    }
+>>>>>>> Stashed changes
 }

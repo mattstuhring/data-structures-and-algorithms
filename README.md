@@ -354,3 +354,52 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/fizz-buzz-tree.jpg)
+<<<<<<< Updated upstream
+=======
+
+--------------------------------------------------------------
+
+### 17. Breadth-first Traversal
+
+#### Challenge
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+
+#### Approach & Efficiency
+Use a queue data structure and it's methods to traverse through the binary tree.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/tree/Tree.java)
+
+### Contributions
+- Jack Kinne
+
+#### Solution
+![Whiteboard](code401challenges/assets/breadth-first-tree.jpg)
+
+
+### 18. Find the Maximum Value in a Binary Tree
+
+#### Challenge
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+#### Approach & Efficiency
+Recursively traverse tree. Check each node value againt a field max variable.  Return max.
+
+Big O Notation
+Time: O(n)
+Space: O(1)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/tree/Tree.java)
+
+### Contributions
+- Jack Kinne
+- Travis Cox
+
+#### Solution
+![Whiteboard](code401challenges/assets/max-value.jpg)
+>>>>>>> Stashed changes
