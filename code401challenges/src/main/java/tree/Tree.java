@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Tree<T> {
     public Node<T> root;
+    private int max = 0;
 
     public Tree() {
         this.root = null;
@@ -96,5 +97,27 @@ public class Tree<T> {
         }
 
         return result;
+    }
+
+    public Integer findMaxValue(Tree<Object> tree) {
+        if (tree.root == null) {
+            return null;
+        }
+
+        findMaxValueRecursion(tree.root);
+
+        return (Integer) max;
+    }
+
+    public void findMaxValueRecursion(Node<Object> node) {
+        if (node != null) {
+
+            if ((int)node.value > this.max) {
+                this.max = (int)node.value;
+            }
+
+            findMaxValueRecursion(node.left);
+            findMaxValueRecursion(node.right);
+        }
     }
 }
