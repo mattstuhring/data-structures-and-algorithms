@@ -2,15 +2,24 @@
 
 Brief description of what this algorithm is, does, and why we care.
 
+- Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.
+
 Is it more efficient than others? How does it attack the problem differently?
+
+- Worst-case time complexity is Ο(n log n).
+
 
 ## Learning Objectives
 - To be able to explain and implement merge sort.
 
 ## Diagram
+![Insertion Sort diagram](../../../../assets/merge-sort.png)
 
 
 ## Algorithm
+- if there is only one element in the array then it's already sorted, return.
+- divide the array recursively into two halves until it can not be divided anymore.
+- merge the smaller arrays into new array in sorted order.
 
 
 ## Pseudocode
@@ -53,5 +62,7 @@ ALGORITHM Merge(left, right, arr)
 ## Readings and References
 
 Watch
+- [YouTube - Merge Sort](https://www.youtube.com/watch?v=4VqmGXwpLqc)
 
 Read
+- [Tutorials Point - Merge Sort](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm)
