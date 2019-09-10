@@ -10,7 +10,7 @@ Is it more efficient than others? How does it attack the problem differently?
 - To be able to explain and implement insertion sort.
 
 ## Diagram
-![Insertion Sort diagram](assets/insertionsort.png)
+![Insertion Sort diagram](../../../../assets/insertionsort.png)
 
 ## Algorithm
 * First element in the array is already sorted
