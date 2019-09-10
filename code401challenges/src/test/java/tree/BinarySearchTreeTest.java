@@ -181,4 +181,25 @@ public class BinarySearchTreeTest {
         assertEquals((Integer) 23, t.findMaxValue(tree));
     }
 
+    @Test
+    public void testCountLeafNodes() {
+        //       10
+        //     /  \
+        //    15    23
+        //   / \    \
+        //  22  6    19
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new Node<>(10);
+        tree.root.left = new Node<>(15);
+        tree.root.right = new Node<>(23);
+        tree.root.left.left = new Node<>(22);
+        tree.root.left.right = new Node<>(6);
+        tree.root.right.right = new Node<>(19);
+
+        Tree<Object> t = new Tree<>();
+
+        System.out.println(t.getLeafCount(tree));
+    }
 }
