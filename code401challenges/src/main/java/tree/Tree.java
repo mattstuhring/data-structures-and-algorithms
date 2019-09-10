@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Tree<T> {
     public Node<T> root;
     private int max = 0;
+    private int leaf = 0;
 
     public Tree() {
         this.root = null;
@@ -118,6 +119,29 @@ public class Tree<T> {
 
             findMaxValueRecursion(node.left);
             findMaxValueRecursion(node.right);
+        }
+    }
+
+
+    public int getLeafCount(Tree<Object> tree) {
+        if (tree.root == null) {
+            return 0;
+        }
+
+        getLeafCount(tree.root);
+
+        return this.leaf;
+    }
+
+    private void getLeafCount(Node node) {
+        if (node != null) {
+
+            if (node.left == null && node.right == null) {
+                this.leaf++;
+            }
+
+            getLeafCount(node.left);
+            getLeafCount(node.right);
         }
     }
 }
