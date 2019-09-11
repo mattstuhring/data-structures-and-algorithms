@@ -1,5 +1,6 @@
 package quicksort;
 
+// Resource -> UDEMY COURSE - Data Structures and Algorithms: Deep Dive Using Java
 public class QuickSort {
 
     public static int[] quickSort(int[] input, int start, int end) {
