@@ -15,4 +15,12 @@ public class MergeSortTest {
         // [-22, -15, 1, 7, 20, 35, 55]
         assertEquals("[-22, -15, 1, 7, 20, 35, 55]", Arrays.toString(MergeSort.mergeSort(intArray, 0, intArray.length)));
     }
+
+    @Test
+    public void testMergeSort_emptyArray() {
+        int[] intArray = { };
+
+        assertNull(MergeSort.mergeSort(intArray, 0, intArray.length));
+
+    }
 }
