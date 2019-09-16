@@ -15,4 +15,11 @@ public class QuickSortTest {
         // [-22, -15, 1, 7, 20, 35, 55]
         assertEquals("[-22, -15, 1, 7, 20, 35, 55]", Arrays.toString(QuickSort.quickSort(intArray, 0, intArray.length)));
     }
+
+    @Test
+    public void testQuickSort_emptyArray() {
+        int[] intArray = new int[]{};
+
+        assertNull(QuickSort.quickSort(intArray, 0, intArray.length));
+    }
 }
