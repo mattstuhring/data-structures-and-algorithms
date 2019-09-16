@@ -16,6 +16,7 @@
 13. Breadth-first Traversal
 14. Find the Maximum Value in a Binary Tree
 15. Hashtable
+16. Find the first repeated word in a book
 
 --------------------------------------------------------------
 
