@@ -1,17 +1,17 @@
 package tree;
 
-public class Node<T> {
+public class TreeNode<T> {
     public T value;
-    public Node<T> left;
-    public Node<T> right;
+    public TreeNode<T> left;
+    public TreeNode<T> right;
 
-    public Node(T value) {
+    public TreeNode(T value) {
         this.value = value;
         this.left = null;
         this.right = null;
     }
 
-    public Node(T value, Node<T> left, Node<T> right) {
+    public TreeNode(T value, TreeNode<T> left, TreeNode<T> right) {
         this.value = value;
         this.left = left;
         this.right = right;

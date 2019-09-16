@@ -1,7 +1,7 @@
 package utilities;
 
 import org.junit.Test;
-import tree.Node;
+import tree.TreeNode;
 import tree.Tree;
 
 import static org.junit.Assert.*;
@@ -17,13 +17,13 @@ public class FizzBuzzTreeTest {
         //  3  7 11 15
 
         Tree<Object> tree = new Tree<>();
-        tree.root = new Node<>(10);
-        tree.root.left = new Node<>(5);
-        tree.root.right = new Node<>(13);
-        tree.root.left.left = new Node<>(3);
-        tree.root.left.right = new Node<>(7);
-        tree.root.right.right = new Node<>(15);
-        tree.root.right.left = new Node<>(11);
+        tree.root = new TreeNode<>(10);
+        tree.root.left = new TreeNode<>(5);
+        tree.root.right = new TreeNode<>(13);
+        tree.root.left.left = new TreeNode<>(3);
+        tree.root.left.right = new TreeNode<>(7);
+        tree.root.right.right = new TreeNode<>(15);
+        tree.root.right.left = new TreeNode<>(11);
 
         FizzBuzzTree fbt = new FizzBuzzTree();
 
@@ -39,13 +39,13 @@ public class FizzBuzzTreeTest {
         //  1  7 12 26
 
         Tree<Object> tree = new Tree<>();
-        tree.root = new Node<>(15);
-        tree.root.left = new Node<>(4);
-        tree.root.right = new Node<>(20);
-        tree.root.left.left = new Node<>(1);
-        tree.root.left.right = new Node<>(5);
-        tree.root.right.right = new Node<>(26);
-        tree.root.right.left = new Node<>(12);
+        tree.root = new TreeNode<>(15);
+        tree.root.left = new TreeNode<>(4);
+        tree.root.right = new TreeNode<>(20);
+        tree.root.left.left = new TreeNode<>(1);
+        tree.root.left.right = new TreeNode<>(5);
+        tree.root.right.right = new TreeNode<>(26);
+        tree.root.right.left = new TreeNode<>(12);
 
         FizzBuzzTree fbt = new FizzBuzzTree();
 

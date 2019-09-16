@@ -16,6 +16,7 @@
 13. Breadth-first Traversal
 14. Find the Maximum Value in a Binary Tree
 15. Hashtable
+16. Find the first repeated word in a book
 
 --------------------------------------------------------------
 
@@ -424,3 +425,26 @@ Implement a Hashtable with the following methods:
 [Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/hashtable/Hashtable.java)
 
 --------------------------------------------------------------
+
+### 16. Find the first repeated word in a book
+
+#### Challenge
+Find the first repeated word in a book.
+
+#### Approach & Efficiency
+Use a hashtable to store key value pairs.  Split up the words into an array of words.  Iterate through the array of words.  Check if word exists within the hashtable. If it does then return the repeated word, else add the new word to the hashtable.
+
+Big O Notation
+Time: O(n)
+Space: O(n)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/RepeatedWord.java)
+
+### Contributions
+- Jack Kinne
+- Travis Cox
+- Renee Messick
+
+#### Solution
+N/A

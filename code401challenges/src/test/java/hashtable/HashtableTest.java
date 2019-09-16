@@ -80,7 +80,7 @@ public class HashtableTest {
     }
 
     @Test
-    public void testAdd_collision() {
+    public void testAdd_singleCollision() {
         Hashtable ht = new Hashtable(10);
         ht.add("matt", "matt is user 1");
         ht.add("kyso", "kyso is user 2");
@@ -88,6 +88,20 @@ public class HashtableTest {
         ht.add("chica", "chica is user 4");
 
         assertEquals("kyso is user 2", ht.get("kyso"));
+    }
+
+    @Test
+    public void testAdd_multipleCollisions() {
+        Hashtable ht = new Hashtable(1);
+        ht.add("matt", "matt is user 1");
+        ht.add("kyso", "kyso is user 2");
+        ht.add("ty", "ty is user 3");
+        ht.add("chica", "chica is user 4");
+
+        assertTrue(ht.contains("matt"));
+        assertTrue(ht.contains("kyso"));
+        assertTrue(ht.contains("ty"));
+        assertTrue(ht.contains("chica"));
     }
 
     @Test

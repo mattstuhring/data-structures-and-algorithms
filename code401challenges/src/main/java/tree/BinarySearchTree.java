@@ -9,30 +9,30 @@ public class BinarySearchTree extends Tree<Integer> {
     // https://www.youtube.com/watch?v=OgJL8eh87PI
     // Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
     public void add(int value) {
-        Node<Integer> nodeToAdd = new Node<>(value);
+        TreeNode<Integer> treeNodeToAdd = new TreeNode<>(value);
 
         if (this.root == null) {
-            this.root = nodeToAdd;
+            this.root = treeNodeToAdd;
         }
 
-        traverseAndAddNode(this.root, nodeToAdd);
+        traverseAndAddNode(this.root, treeNodeToAdd);
     }
 
-    private void traverseAndAddNode(Node<Integer> node, Node<Integer> nodeToAdd) {
-        if (nodeToAdd.value < node.value) {
+    private void traverseAndAddNode(TreeNode<Integer> treeNode, TreeNode<Integer> treeNodeToAdd) {
+        if (treeNodeToAdd.value < treeNode.value) {
 
-            if (node.left == null) {
-                node.left = nodeToAdd;
+            if (treeNode.left == null) {
+                treeNode.left = treeNodeToAdd;
             } else {
-                traverseAndAddNode(node.left, nodeToAdd);
+                traverseAndAddNode(treeNode.left, treeNodeToAdd);
             }
 
-        } else if (nodeToAdd.value > node.value) {
+        } else if (treeNodeToAdd.value > treeNode.value) {
 
-            if (node.right == null) {
-                node.right = nodeToAdd;
+            if (treeNode.right == null) {
+                treeNode.right = treeNodeToAdd;
             } else {
-                traverseAndAddNode(node.right, nodeToAdd);
+                traverseAndAddNode(treeNode.right, treeNodeToAdd);
             }
 
         }
@@ -44,7 +44,7 @@ public class BinarySearchTree extends Tree<Integer> {
         return containsNodeRecursive(this.root, value);
     }
 
-    private boolean containsNodeRecursive(Node<Integer> current, int value) {
+    private boolean containsNodeRecursive(TreeNode<Integer> current, int value) {
         if (current == null) {
             return false;
         }
