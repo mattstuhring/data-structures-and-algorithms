@@ -21,4 +21,9 @@ public class RepeatedWordTest {
         assertEquals("summer", RepeatedWord.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."));
     }
 
+    @Test
+    public void repeatedWord_doesNotExist() {
+        assertNull(RepeatedWord.repeatedWord("My name is matt"));
+    }
+
 }
