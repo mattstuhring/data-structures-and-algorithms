@@ -12,6 +12,10 @@
 9. Binary Tree and BST Implementation
 10. Breadth-first Traversal
 11. Find the Maximum Value in a Binary Tree
+12. FizzBuzz binary tree
+13. Breadth-first Traversal
+14. Find the Maximum Value in a Binary Tree
+15. Hashtable
 
 --------------------------------------------------------------
 
@@ -90,7 +94,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 4. Linked List Implementation
+### 3. Linked List Implementation
 
 #### Challenge
 Implement a Singly Linked List Data Structure
@@ -116,7 +120,7 @@ N/A
 
 --------------------------------------------------------------
 
-### 5. Linked list insertions
+### 4. Linked list insertions
 
 #### Challenge
 Write 3 insertion methods for a singly linked list.
@@ -139,7 +143,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 7. k-th value from the end of a linked list
+### 5. k-th value from the end of a linked list
 
 #### Challenge
 Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
@@ -162,7 +166,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 8. Merge two linked lists
+### 6. Merge two linked lists
 
 #### Challenge
 Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1).
@@ -186,7 +190,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 9. Stacks and Queues
+### 7. Stacks and Queues
 
 #### Challenge
 Implement a Stack and a Queue Data Structure
@@ -213,7 +217,7 @@ N/A
 
 --------------------------------------------------------------
 
-### 10. Stacks and Queues
+### 8. Stacks and Queues
 
 #### Challenge
 Implement a Queue using two Stacks
@@ -239,7 +243,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 10. Animal Shelter
+### 9. Animal Shelter
 
 #### Challenge
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
@@ -268,7 +272,7 @@ Space: O(n)
 
 --------------------------------------------------------------
 
-### 11. Multi-bracket Validation
+### 10. Multi-bracket Validation
 
 #### Challenge
 Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
@@ -295,7 +299,7 @@ N/A
 
 --------------------------------------------------------------
 
-### 15. Binary Tree and BST Implementation
+### 11. Binary Tree and BST Implementation
 
 #### Challenge
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
@@ -328,7 +332,7 @@ N/A
 
 --------------------------------------------------------------
 
-### 16. Binary Tree and BST Implementation
+### 12. FizzBuzz binary tree
 
 #### Challenge
 Conduct “FizzBuzz” on a tree while traversing through it. Change the values of each of the nodes dependent on the current node’s value.
@@ -359,7 +363,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 17. Breadth-first Traversal
+### 13. Breadth-first Traversal
 
 #### Challenge
 Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
@@ -382,7 +386,7 @@ Space: O(1)
 
 --------------------------------------------------------------
 
-### 18. Find the Maximum Value in a Binary Tree
+### 14. Find the Maximum Value in a Binary Tree
 
 #### Challenge
 Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
@@ -403,3 +407,20 @@ Space: O(1)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/max-value.jpg)
+
+--------------------------------------------------------------
+
+### 15. Hashtable
+
+#### Challenge
+Implement a Hashtable with the following methods:
+
+- add: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+- get: takes in the key and returns the value from the table.
+- contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
+- hash: takes in an arbitrary key and returns an index in the collection.
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/hashtable/Hashtable.java)
+
+--------------------------------------------------------------
