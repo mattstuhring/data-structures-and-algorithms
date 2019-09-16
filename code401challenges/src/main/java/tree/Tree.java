@@ -5,7 +5,7 @@ import stacksandqueues.Queue;
 import java.util.ArrayList;
 
 public class Tree<T> {
-    public Node<T> root;
+    public TreeNode<T> root;
     private int max = 0;
     private int leaf = 0;
 
@@ -13,7 +13,7 @@ public class Tree<T> {
         this.root = null;
     }
 
-    public Tree(Node<T> root) {
+    public Tree(TreeNode<T> root) {
         this.root = root;
     }
 
@@ -23,13 +23,13 @@ public class Tree<T> {
 
     // Pre-order traversal
     // root node, left subtree, right subtree
-    private ArrayList<T> preOrder(Node<T> node, ArrayList<T> arr) {
-        if (node != null) {
+    private ArrayList<T> preOrder(TreeNode<T> treeNode, ArrayList<T> arr) {
+        if (treeNode != null) {
             // System.out.print(" " + node.value);
-            arr.add(node.value);
+            arr.add(treeNode.value);
 
-            preOrder(node.left, arr);
-            preOrder(node.right, arr);
+            preOrder(treeNode.left, arr);
+            preOrder(treeNode.right, arr);
         }
 
         return arr;
@@ -41,14 +41,14 @@ public class Tree<T> {
 
     // The in-order traversal
     // left sub-tree, root node, right sub-tree
-    private ArrayList<T> inOrder(Node<T> node, ArrayList<T> arr) {
-        if (node != null) {
-            inOrder(node.left, arr);
+    private ArrayList<T> inOrder(TreeNode<T> treeNode, ArrayList<T> arr) {
+        if (treeNode != null) {
+            inOrder(treeNode.left, arr);
 
             // System.out.print(" " + node.value);
-            arr.add(node.value);
+            arr.add(treeNode.value);
 
-            inOrder(node.right, arr);
+            inOrder(treeNode.right, arr);
         }
 
         return arr;
@@ -60,13 +60,13 @@ public class Tree<T> {
 
     // Post-order traversal
     // left subtree, right subtree, root node
-    private ArrayList<T> postOrder(Node<T> node, ArrayList<T> arr) {
-        if (node != null) {
-            postOrder(node.left, arr);
-            postOrder(node.right, arr);
+    private ArrayList<T> postOrder(TreeNode<T> treeNode, ArrayList<T> arr) {
+        if (treeNode != null) {
+            postOrder(treeNode.left, arr);
+            postOrder(treeNode.right, arr);
 
             // System.out.print(" " + node.value);
-            arr.add(node.value);
+            arr.add(treeNode.value);
         }
 
         return arr;
@@ -74,7 +74,7 @@ public class Tree<T> {
 
     public ArrayList<Integer> BinaryTreeBreadthFirst(Tree<Object> tree) {
         ArrayList<Integer> result = new ArrayList<>();
-        Queue<Node> queue = new Queue<>();
+        Queue<TreeNode> queue = new Queue<>();
 
         if (tree.root == null) {
             return result;
@@ -110,15 +110,15 @@ public class Tree<T> {
         return (Integer) max;
     }
 
-    public void findMaxValueRecursion(Node<Object> node) {
-        if (node != null) {
+    public void findMaxValueRecursion(TreeNode<Object> treeNode) {
+        if (treeNode != null) {
 
-            if ((int)node.value > this.max) {
-                this.max = (int)node.value;
+            if ((int) treeNode.value > this.max) {
+                this.max = (int) treeNode.value;
             }
 
-            findMaxValueRecursion(node.left);
-            findMaxValueRecursion(node.right);
+            findMaxValueRecursion(treeNode.left);
+            findMaxValueRecursion(treeNode.right);
         }
     }
 
@@ -133,15 +133,15 @@ public class Tree<T> {
         return this.leaf;
     }
 
-    private void getLeafCount(Node node) {
-        if (node != null) {
+    private void getLeafCount(TreeNode treeNode) {
+        if (treeNode != null) {
 
-            if (node.left == null && node.right == null) {
+            if (treeNode.left == null && treeNode.right == null) {
                 this.leaf++;
             }
 
-            getLeafCount(node.left);
-            getLeafCount(node.right);
+            getLeafCount(treeNode.left);
+            getLeafCount(treeNode.right);
         }
     }
 }

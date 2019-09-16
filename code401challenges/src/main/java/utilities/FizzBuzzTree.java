@@ -1,7 +1,7 @@
 package utilities;
 
 
-import tree.Node;
+import tree.TreeNode;
 import tree.Tree;
 
 public class FizzBuzzTree {
@@ -14,18 +14,18 @@ public class FizzBuzzTree {
         return tree;
     }
 
-    private void fizzBuzzTreeRecursion(Node<Object> node) {
-        if (node != null) {
-            if ((int)node.value % 3 == 0 && (int)node.value % 5 == 0) {
-                node.value = "FizzBuzz";
-            } else if ((int)node.value % 3 == 0) {
-                node.value = "Fizz";
-            } else if ((int)node.value % 5 == 0) {
-                node.value = "Buzz";
+    private void fizzBuzzTreeRecursion(TreeNode<Object> treeNode) {
+        if (treeNode != null) {
+            if ((int) treeNode.value % 3 == 0 && (int) treeNode.value % 5 == 0) {
+                treeNode.value = "FizzBuzz";
+            } else if ((int) treeNode.value % 3 == 0) {
+                treeNode.value = "Fizz";
+            } else if ((int) treeNode.value % 5 == 0) {
+                treeNode.value = "Buzz";
             }
 
-            fizzBuzzTreeRecursion(node.left);
-            fizzBuzzTreeRecursion(node.right);
+            fizzBuzzTreeRecursion(treeNode.left);
+            fizzBuzzTreeRecursion(treeNode.right);
         }
     }
 }

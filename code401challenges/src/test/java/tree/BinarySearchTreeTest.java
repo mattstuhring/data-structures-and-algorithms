@@ -125,14 +125,14 @@ public class BinarySearchTreeTest {
 
         Tree<Object> tree = new Tree<>();
 
-        tree.root = new Node<>(2);
-        tree.root.left = new Node<>(7);
-        tree.root.right = new Node<>(5);
-        tree.root.left.left = new Node<>(2);
-        tree.root.left.right = new Node<>(6);
-        tree.root.right.right = new Node<>(9);
+        tree.root = new TreeNode<>(2);
+        tree.root.left = new TreeNode<>(7);
+        tree.root.right = new TreeNode<>(5);
+        tree.root.left.left = new TreeNode<>(2);
+        tree.root.left.right = new TreeNode<>(6);
+        tree.root.right.right = new TreeNode<>(9);
 
-        Tree<Node> t = new Tree<>();
+        Tree<TreeNode> t = new Tree<>();
 
         assertEquals("[2, 7, 5, 2, 6, 9]", t.BinaryTreeBreadthFirst(tree).toString());
     }
@@ -147,12 +147,12 @@ public class BinarySearchTreeTest {
 
         Tree<Object> tree = new Tree<>();
 
-        tree.root = new Node<>(2);
-        tree.root.left = new Node<>(7);
-        tree.root.right = new Node<>(5);
-        tree.root.left.left = new Node<>(2);
-        tree.root.left.right = new Node<>(6);
-        tree.root.right.right = new Node<>(9);
+        tree.root = new TreeNode<>(2);
+        tree.root.left = new TreeNode<>(7);
+        tree.root.right = new TreeNode<>(5);
+        tree.root.left.left = new TreeNode<>(2);
+        tree.root.left.right = new TreeNode<>(6);
+        tree.root.right.right = new TreeNode<>(9);
 
         Tree<Object> t = new Tree<>();
 
@@ -169,12 +169,12 @@ public class BinarySearchTreeTest {
 
         Tree<Object> tree = new Tree<>();
 
-        tree.root = new Node<>(10);
-        tree.root.left = new Node<>(15);
-        tree.root.right = new Node<>(23);
-        tree.root.left.left = new Node<>(22);
-        tree.root.left.right = new Node<>(6);
-        tree.root.right.right = new Node<>(19);
+        tree.root = new TreeNode<>(10);
+        tree.root.left = new TreeNode<>(15);
+        tree.root.right = new TreeNode<>(23);
+        tree.root.left.left = new TreeNode<>(22);
+        tree.root.left.right = new TreeNode<>(6);
+        tree.root.right.right = new TreeNode<>(19);
 
         Tree<Object> t = new Tree<>();
 
@@ -191,12 +191,12 @@ public class BinarySearchTreeTest {
 
         Tree<Object> tree = new Tree<>();
 
-        tree.root = new Node<>(10);
-        tree.root.left = new Node<>(15);
-        tree.root.right = new Node<>(23);
-        tree.root.left.left = new Node<>(22);
-        tree.root.left.right = new Node<>(6);
-        tree.root.right.right = new Node<>(19);
+        tree.root = new TreeNode<>(10);
+        tree.root.left = new TreeNode<>(15);
+        tree.root.right = new TreeNode<>(23);
+        tree.root.left.left = new TreeNode<>(22);
+        tree.root.left.right = new TreeNode<>(6);
+        tree.root.right.right = new TreeNode<>(19);
 
         Tree<Object> t = new Tree<>();
 
