@@ -17,6 +17,7 @@
 14. Find the Maximum Value in a Binary Tree
 15. Hashtable
 16. Find the first repeated word in a book
+17. Find common values in 2 binary trees
 
 --------------------------------------------------------------
 
@@ -445,6 +446,30 @@ Space: O(n)
 - Jack Kinne
 - Travis Cox
 - Renee Messick
+
+#### Solution
+N/A
+
+--------------------------------------------------------------
+
+### 17. Find common values in 2 binary trees
+
+#### Challenge
+Find common values in 2 binary trees.
+
+#### Approach & Efficiency
+Use a hashtable to store key value pairs.  Traverse through the first tree and add the node values to the hashtable.  Traverse through the second tree and compare the node values to the hashtable key/values. If there is a match then add it to the result list, else continue.
+
+Big O Notation
+Time: O(n)
+Space: O(n)
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/TreeIntersection.java)
+
+### Contributions
+- Jack Kinne
+- Travis Cox
 
 #### Solution
 N/A
