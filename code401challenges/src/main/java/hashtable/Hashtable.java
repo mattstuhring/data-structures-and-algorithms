@@ -3,7 +3,7 @@ package hashtable;
 
 public class Hashtable {
 
-    private HashNode[] hashtable;
+    public HashNode[] hashtable;
 
     public Hashtable(int size) {
         this.hashtable = new HashNode[size];
