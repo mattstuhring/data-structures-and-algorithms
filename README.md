@@ -19,6 +19,7 @@
 16. Find the first repeated word in a book
 17. Find common values in 2 binary trees
 18. Implement a simplified LEFT JOIN for 2 Hashmaps
+19. Implement a Graph
 
 --------------------------------------------------------------
 
@@ -504,3 +505,47 @@ Space: O(n)
 
 #### Solution
 ![Whiteboard](code401challenges/assets/left-join.jpg)
+
+--------------------------------------------------------------
+
+### 19. Implement a Graph
+
+#### Challenge
+Implement a Graph
+
+#### Approach & Efficiency
+
+##### AddNode()
+- Adds a new node to the graph
+- Takes in the value of that node.  
+- Returns the added node
+
+##### AddEdge()
+- Adds a new edge between two nodes in the graph
+- Include the ability to have a “weight”
+- Takes in the two nodes to be connected by the edge
+- Both nodes should already be in the Graph
+
+##### GetNodes()
+- Returns all of the nodes in the graph as a collection (set, list, or similar)
+
+##### GetNeighbors()
+- Returns a collection of nodes connected to the given node
+- Takes in a given node
+- Include the weight of the connection in the returned collection
+
+#### Size()
+- Returns the total number of nodes in the graph
+
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/graph/Graph.java)
+
+### Contributions
+- Jack Kinne
+- Travis Cox
+- Melfi Perez
+- Renee Messick
+
+#### Solution
+N/A
