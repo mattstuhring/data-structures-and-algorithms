@@ -2,7 +2,9 @@ package graph;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -97,4 +99,104 @@ public class GraphTest {
 
         assertEquals(0, graph.size);
     }
+
+    @Test
+    public void testBreadthFirst_attempt1() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("matt");
+        Vertex<String> v2 = graph.addNode("kyso");
+
+        graph.addDirectedEdge(v1, v2, 10);
+        graph.addDirectedEdge(v2, v1, 10);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Vertex<String> v : graph.breadthFirst(v1)) {
+            sb.append(v.value).append(", ");
+        }
+
+        System.out.println(sb.toString());
+
+        assertEquals("matt, kyso, ", sb.toString());
+    }
+
+    @Test
+    public void testBreadthFirst_attempt2() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("matt");
+        Vertex<String> v2 = graph.addNode("kyso");
+        Vertex<String> v3 = graph.addNode("ty");
+        Vertex<String> v4 = graph.addNode("chica");
+        Vertex<String> v5 = graph.addNode("mako");
+        Vertex<String> v6 = graph.addNode("grace");
+
+        graph.addDirectedEdge(v1, v2, 10);
+        graph.addDirectedEdge(v1, v3, 10);
+        graph.addDirectedEdge(v2, v4, 10);
+        graph.addDirectedEdge(v2, v5, 10);
+        graph.addDirectedEdge(v3, v6, 10);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Vertex<String> v : graph.breadthFirst(v1)) {
+            sb.append(v.value).append(", ");
+        }
+
+        assertEquals("matt, kyso, ty, chica, mako, grace, ", sb.toString());
+    }
+
+    @Test
+    public void testBreadthFirst_attempt3() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("matt");
+        Vertex<String> v2 = graph.addNode("kyso");
+        Vertex<String> v3 = graph.addNode("ty");
+        Vertex<String> v4 = graph.addNode("chica");
+        Vertex<String> v5 = graph.addNode("mako");
+        Vertex<String> v6 = graph.addNode("grace");
+
+        graph.addDirectedEdge(v2, v6, 10);
+        graph.addDirectedEdge(v4, v3, 10);
+        graph.addDirectedEdge(v1, v4, 10);
+        graph.addDirectedEdge(v3, v5, 10);
+        graph.addDirectedEdge(v5, v6, 10);
+        graph.addDirectedEdge(v6, v2, 10);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Vertex<String> v : graph.breadthFirst(v1)) {
+            sb.append(v.value).append(", ");
+        }
+
+        assertEquals("matt, chica, ty, mako, grace, kyso, ", sb.toString());
+    }
+
+    @Test
+    public void testBreadthFirst_attempt4() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        graph.addUndirectedEdge(v1, v2, 10);
+        graph.addUndirectedEdge(v2, v3, 10);
+        graph.addUndirectedEdge(v2, v4, 10);
+        graph.addUndirectedEdge(v3, v4, 10);
+        graph.addUndirectedEdge(v3, v5, 10);
+        graph.addUndirectedEdge(v3, v6, 10);
+        graph.addUndirectedEdge(v4, v6, 10);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Vertex<String> v : graph.breadthFirst(v1)) {
+            sb.append(v.value).append(", ");
+        }
+
+        assertEquals("Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo, ", sb.toString());
+    }
+
+
 }
