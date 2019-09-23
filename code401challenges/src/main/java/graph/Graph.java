@@ -19,6 +19,12 @@ public class Graph<T> {
         return node;
     }
 
+    // Add Undirected Edge
+    public void addUndirectedEdge(Vertex<T> a, Vertex<T> b, int weight) {
+        addDirectedEdge(a, b, weight);
+        addDirectedEdge(b, a, weight);
+    }
+
     // Add Directed Edge
     // Adds a directed edge between two vertices in a graph
     // Adds a new edge between two nodes in the graph
@@ -57,14 +63,33 @@ public class Graph<T> {
     }
 
     // BreadthFirst
-    public List<Vertex<T>> BreadthFirst(Vertex<T> root) {
-        // if there are children of the node we are currently looking at,
-        // we want to mark each one as “visited”. By marking each child node as visited,
-        // this will help us know that we have already seen that node before,
-        // and won’t accidently push us into an infinite loop if the graph was cyclic.
-        // In addition to marking each child node as visited, we want to place any of its children that have not yet been visited into the queue.
+    public ArrayList<Vertex<T>> breadthFirst(Vertex<T> node) {
+        // Extend your graph object with a breadth-first traversal method that accepts a starting node
+        // Without utilizing any of the built-in methods available to your language,
+        // return a collection of nodes in the order they were visited. Display the collection
 
-        return null;
+        ArrayList<Vertex<T>> result = new ArrayList<>();
+        Queue<Vertex<T>> queue = new LinkedList<>();
+        queue.add(node);
+        node.visited = true;
+
+        while (queue.peek() != null) {
+            Vertex<T> v = queue.remove();
+            result.add(v);
+
+            List<Edge<T>> neighbors = getNeighbors(v);
+
+            for (int i = 0; i < neighbors.size(); i++) {
+                Vertex<T> vertexAtIndex = neighbors.get(i).vertex;
+
+                if (vertexAtIndex != null && !vertexAtIndex.visited) {
+                    queue.add(vertexAtIndex);
+                    vertexAtIndex.visited = true;
+                }
+            }
+        }
+
+        return result;
     }
 
 }

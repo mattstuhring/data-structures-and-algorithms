@@ -20,6 +20,7 @@
 17. Find common values in 2 binary trees
 18. Implement a simplified LEFT JOIN for 2 Hashmaps
 19. Implement a Graph
+20. Implement a breadth-first traversal on a graph
 
 --------------------------------------------------------------
 
@@ -549,3 +550,23 @@ Implement a Graph
 
 #### Solution
 N/A
+
+--------------------------------------------------------------
+
+### 20. Implement a breadth-first traversal on a graph
+Implement a breadth-first traversal on a graph
+
+#### Challenge
+Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+#### Approach & Efficiency
+Use a queue to store the bfs values.  Given the root vertex of the graph iterate through the queue while the queue is not empty.  During each iteration also traverse the neighbor vertices.  Add these to the queue.  Return a list of bfs value.
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/graph/Graph.java)
+
+### Contributions
+
+
+#### Solution
+N/A - Did not have time to whiteboard
