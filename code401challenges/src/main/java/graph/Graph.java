@@ -92,5 +92,43 @@ public class Graph<T> {
         return result;
     }
 
+    public String directFlights(Graph<T> graph, Vertex<T>[] cities) {
+        // Given a business trip itinerary, and an Alaska Airlines route map,
+        // is the trip possible with direct flights?
+        // If so, how much will the total trip cost be?
+        // Write a function based on the specifications above, which takes in a graph, and an array of city names.
+        // Return whether the full trip is possible with direct flights, and how much it would cost.
+
+        for (Vertex<T> v : cities) {
+            if (!graph.getNodes().contains(v)) {
+                return  "false, $0";
+            }
+        }
+
+        int cost = 0;
+        boolean isFound = false;
+
+        for (int i = 0; i < cities.length - 1; i++) {
+            isFound = false;
+
+            for (Edge<T> e : graph.getNeighbors(cities[i])) {
+
+                if (e.vertex.value.equals(cities[i + 1].value)) {
+                    cost += e.weight;
+                    isFound = true;
+                    break;
+                }
+            }
+
+            if (!isFound) {
+                // return -> boolean, cost
+                return "false, $0";
+            }
+        }
+
+        //String res = Boolean.toString(isFound).substring(0, 1).toUpperCase() + Boolean.toString(isFound).substring(1);
+        return isFound + ", $" + cost;
+    }
+
 }
 
