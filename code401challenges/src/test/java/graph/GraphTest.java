@@ -198,5 +198,134 @@ public class GraphTest {
         assertEquals("Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo, ", sb.toString());
     }
 
+    @Test
+    public void testDirectFlights() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        graph.addUndirectedEdge(v1, v3, 82);
+        graph.addUndirectedEdge(v1, v2, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+        graph.addUndirectedEdge(v2, v4, 42);
+        graph.addUndirectedEdge(v3, v4, 105);
+        graph.addUndirectedEdge(v3, v5, 37);
+        graph.addUndirectedEdge(v3, v6, 26);
+        graph.addUndirectedEdge(v4, v6, 73);
+        graph.addUndirectedEdge(v5, v6, 250);
+
+        Vertex[] cities = new Vertex[]{ v2, v3 };
+
+        assertEquals("true, $99", graph.directFlights(graph, cities));
+    }
+
+    @Test
+    public void testDirectFlights_attempt2() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        graph.addUndirectedEdge(v1, v3, 82);
+        graph.addUndirectedEdge(v1, v2, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+        graph.addUndirectedEdge(v2, v4, 42);
+        graph.addUndirectedEdge(v3, v4, 105);
+        graph.addUndirectedEdge(v3, v5, 37);
+        graph.addUndirectedEdge(v3, v6, 26);
+        graph.addUndirectedEdge(v4, v6, 73);
+        graph.addUndirectedEdge(v5, v6, 250);
+
+        Vertex[] cities = new Vertex[]{ v3, v3 };
+
+        assertEquals("false, $0", graph.directFlights(graph, cities));
+    }
+
+    @Test
+    public void testDirectFlights_attempt3() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        graph.addUndirectedEdge(v1, v3, 82);
+        graph.addUndirectedEdge(v1, v2, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+        graph.addUndirectedEdge(v2, v4, 42);
+        graph.addUndirectedEdge(v3, v4, 105);
+        graph.addUndirectedEdge(v3, v5, 37);
+        graph.addUndirectedEdge(v3, v6, 26);
+        graph.addUndirectedEdge(v4, v6, 73);
+        graph.addUndirectedEdge(v5, v6, 250);
+
+        Vertex[] cities = new Vertex[]{ v1, v2, v3, v4 };
+
+        assertEquals("true, $354", graph.directFlights(graph, cities));
+    }
+
+    @Test
+    public void testDirectFlights_attempt4() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        Vertex<String> doesNotExist = new Vertex<>("matt");
+
+        graph.addUndirectedEdge(v1, v3, 82);
+        graph.addUndirectedEdge(v1, v2, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+        graph.addUndirectedEdge(v2, v4, 42);
+        graph.addUndirectedEdge(v3, v4, 105);
+        graph.addUndirectedEdge(v3, v5, 37);
+        graph.addUndirectedEdge(v3, v6, 26);
+        graph.addUndirectedEdge(v4, v6, 73);
+        graph.addUndirectedEdge(v5, v6, 250);
+
+        Vertex[] cities = new Vertex[]{ v1, v2, v3, v4, doesNotExist };
+
+        assertEquals("false, $0", graph.directFlights(graph, cities));
+    }
+
+    @Test
+    public void testDirectFlights_attempt5() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("Pandora");
+        Vertex<String> v2 = graph.addNode("Arendelle");
+        Vertex<String> v3 = graph.addNode("Metroville");
+        Vertex<String> v4 = graph.addNode("Monstroplolis");
+        Vertex<String> v5 = graph.addNode("Narnia");
+        Vertex<String> v6 = graph.addNode("Naboo");
+
+        Vertex<String> doesNotExist = new Vertex<>("matt");
+
+        graph.addUndirectedEdge(v1, v3, 82);
+        graph.addUndirectedEdge(v1, v2, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+        graph.addUndirectedEdge(v2, v4, 42);
+        graph.addUndirectedEdge(v3, v4, 105);
+        graph.addUndirectedEdge(v3, v5, 37);
+        graph.addUndirectedEdge(v3, v6, 26);
+        graph.addUndirectedEdge(v4, v6, 73);
+        graph.addUndirectedEdge(v5, v6, 250);
+
+        Vertex[] cities = new Vertex[]{ v1 };
+
+        assertEquals("false, $0", graph.directFlights(graph, cities));
+    }
+
 
 }
