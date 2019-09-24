@@ -21,6 +21,7 @@
 18. Implement a simplified LEFT JOIN for 2 Hashmaps
 19. Implement a Graph
 20. Implement a breadth-first traversal on a graph
+21. Direct flights
 
 --------------------------------------------------------------
 
@@ -567,6 +568,26 @@ Use a queue to store the bfs values.  Given the root vertex of the graph iterate
 
 ### Contributions
 
+
+#### Solution
+N/A - Did not have time to whiteboard
+
+--------------------------------------------------------------
+
+### 21. Direct flights
+Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+
+#### Challenge
+Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
+
+#### Approach & Efficiency
+Use a queue to store the bfs values.  Given the root vertex of the graph iterate through the queue while the queue is not empty.  During each iteration also traverse the neighbor vertices.  Add these to the queue.  Return a list of bfs value.
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/graph/Graph.java)
+
+### Contributions
+- Kevin Couture
 
 #### Solution
 N/A - Did not have time to whiteboard
