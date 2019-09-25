@@ -1,8 +1,11 @@
 package tree;
 
+import stacksandqueues.Node;
 import stacksandqueues.Queue;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Tree<T> {
     public TreeNode<T> root;
@@ -83,13 +86,14 @@ public class Tree<T> {
         }
 
         while (queue.peek() != null) {
+            TreeNode<Object> current = queue.peek();
 
-            if (queue.peek().left != null) {
-                queue.enqueue(queue.peek().left);
+            if (current.left != null) {
+                queue.enqueue(current.left);
             }
 
-            if (queue.peek().right != null) {
-                queue.enqueue(queue.peek().right);
+            if (current.right != null) {
+                queue.enqueue(current.right);
             }
 
             Integer value = (Integer) queue.dequeue().value;
@@ -144,4 +148,33 @@ public class Tree<T> {
             getLeafCount(treeNode.right);
         }
     }
+
+    public List<Integer> findDups(Tree<T> tree) {
+        if (tree.root == null) {
+            return null;
+        }
+
+        List<Integer> dups = new ArrayList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        findDupsHelper(tree.root, map, dups);
+        return dups;
+    }
+
+    private void findDupsHelper(TreeNode<T> treeNode, HashMap<Integer, Integer> map, List<Integer> dups) {
+
+        if (map.containsKey(treeNode.value)) {
+            dups.add((Integer) treeNode.value);
+        } else {
+            map.put((Integer) treeNode.value, (Integer) treeNode.value);
+        }
+
+        if (treeNode.left != null) {
+            findDupsHelper(treeNode.left, map, dups);
+        }
+
+        if (treeNode.right != null) {
+            findDupsHelper(treeNode.right, map, dups);
+        }
+    }
+
 }

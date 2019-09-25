@@ -126,9 +126,37 @@ public class Graph<T> {
             }
         }
 
-        //String res = Boolean.toString(isFound).substring(0, 1).toUpperCase() + Boolean.toString(isFound).substring(1);
         return isFound + ", $" + cost;
     }
 
+    public ArrayList<T> depthFirst(Graph<T> graph, Vertex<T> node) {
+        Stack<Vertex<T>> stack = new Stack<>();
+        ArrayList<T> result = new ArrayList<>();
+
+        if (node == null) {
+            return null;
+        } else {
+            stack.push(node);
+            node.visited = true;
+        }
+
+        while (!stack.isEmpty()) {
+            Vertex<T> current = stack.pop();
+            result.add(current.value);
+
+            List<Edge<T>> neighbors = getNeighbors(current);
+
+            for (int i = 0; i < neighbors.size(); i++) {
+                Vertex<T> vertexAtIndex = neighbors.get(i).vertex;
+
+                if (vertexAtIndex != null && !vertexAtIndex.visited) {
+                    stack.push(vertexAtIndex);
+                    vertexAtIndex.visited = true;
+                }
+            }
+        }
+
+        return result;
+    }
 }
 

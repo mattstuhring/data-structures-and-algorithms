@@ -591,3 +591,20 @@ Use a queue to store the bfs values.  Given the root vertex of the graph iterate
 
 #### Solution
 N/A - Did not have time to whiteboard
+
+--------------------------------------------------------------
+
+### 22. Conduct a depth first preorder traversal on a graph
+Conduct a depth first preorder traversal on a graph
+
+#### Challenge
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+#### Approach & Efficiency
+Use a stack to store the bfs values.  Given the root vertex of the graph iterate through the stack while the stack is not empty.  During each iteration also traverse the neighbor vertices.  Add these to the stack.  Return a list of dfs value.
+
+### Code
+[Github](https://github.com/mattstuhring/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/graph/Graph.java)
+
+#### Solution
+![Graph DFS](code401challenges/assets/graph-dfs.jpg)
