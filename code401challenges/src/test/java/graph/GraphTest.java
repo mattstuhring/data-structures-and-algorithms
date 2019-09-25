@@ -327,5 +327,51 @@ public class GraphTest {
         assertEquals("false, $0", graph.directFlights(graph, cities));
     }
 
+    @Test
+    public void testDepthFirst_attempt1() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("a");
+        Vertex<String> v2 = graph.addNode("b");
+        Vertex<String> v3 = graph.addNode("c");
+        Vertex<String> v4 = graph.addNode("d");
+        Vertex<String> v5 = graph.addNode("e");
+        Vertex<String> v6 = graph.addNode("f");
+        Vertex<String> v7 = graph.addNode("g");
+        Vertex<String> v8 = graph.addNode("h");
+
+        graph.addUndirectedEdge(v1, v2, 82);
+        graph.addUndirectedEdge(v1, v4, 150);
+        graph.addUndirectedEdge(v2, v4, 99);
+        graph.addUndirectedEdge(v4, v6, 42);
+        graph.addUndirectedEdge(v4, v8, 105);
+        graph.addUndirectedEdge(v4, v5, 37);
+        graph.addUndirectedEdge(v2, v3, 26);
+        graph.addUndirectedEdge(v3, v7, 73);
+        graph.addUndirectedEdge(v6, v8, 73);
+
+        assertEquals("[a, d, e, h, f, b, c, g]", graph.depthFirst(graph, v1).toString());
+    }
+
+    @Test
+    public void testDepthFirst_attempt2() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("a");
+
+        assertEquals("[a]", graph.depthFirst(graph, v1).toString());
+    }
+
+    @Test
+    public void testDepthFirst_attempt3() {
+        Graph<String> graph = new Graph<>();
+        Vertex<String> v1 = graph.addNode("a");
+        Vertex<String> v2 = graph.addNode("b");
+        Vertex<String> v3 = graph.addNode("c");
+
+        graph.addUndirectedEdge(v1, v2, 82);
+        graph.addUndirectedEdge(v1, v3, 150);
+        graph.addUndirectedEdge(v2, v3, 99);
+
+        assertEquals("[a, c, b]", graph.depthFirst(graph, v1).toString());
+    }
 
 }

@@ -202,4 +202,26 @@ public class BinarySearchTreeTest {
 
         System.out.println(t.getLeafCount(tree));
     }
+
+    @Test
+    public void testFindDups() {
+        //       10
+        //     /  \
+        //    15    22
+        //   / \    \
+        //  22  6    15
+
+        Tree<Object> tree = new Tree<>();
+
+        tree.root = new TreeNode<>(10);
+        tree.root.left = new TreeNode<>(15);
+        tree.root.right = new TreeNode<>(22);
+        tree.root.left.left = new TreeNode<>(22);
+        tree.root.left.right = new TreeNode<>(6);
+        tree.root.right.right = new TreeNode<>(15);
+
+        Tree<Object> t = new Tree<>();
+
+        System.out.println(t.findDups(tree));
+    }
 }
